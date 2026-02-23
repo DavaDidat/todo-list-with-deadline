@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.container {
+  padding: 20px;
+  background: #fff;
+  margin-top: 100px;
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid #262525;
+  box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+ul {
+  padding: 0;
+}
+
+.isi {
+  margin-left: 100px;
+}
+
+#todo-input {
+  padding: 5px;
+  margin-right: 10px;
+  border: 2px solid #161515;
+  border-radius: 5px;
+}
+
+#deadline-input {
+  padding: 5px;
+  margin-right: 10px;
+  border: 2px solid #161515;
+  border-radius: 5px;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  margin: 12px 0;
+  margin-right: 30px;
+  border-radius: 15px;
+  background: #1e1e1e;
+  color: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.2s ease;
+}
+
+li.show {
+  opacity: 1;
+  transform: translateY(-0px);
+}
+
+li:hover {
+  transform: translateY(-3px);
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+}
+
+li.fade-out {
+  opacity: 0;
+  transform: translateY(10px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+li span {
+  flex: 1;
+  margin-right: 10px;
+  word-break: break-word;
+}
+
+button {
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  background: #333;
+  color: white;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #555;
+}
+
+.completed {
+  opacity: 0.6;
+}
+
+.completed .task-text {
+  text-decoration: line-through;
+  color: #aaa;
+}
+
+.completed button {
+  text-decoration: none;
+  opacity: 1;
+}
+
+.task-left {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.task-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.task-deadline {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+.task-checkbox {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.overdue {
+  background: #801515;
+}
